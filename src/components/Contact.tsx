@@ -39,7 +39,7 @@ const Contact = () => {
     {
       icon: <Linkedin className="w-5 h-5" />,
       label: 'LinkedIn',
-      href: '#',
+      href: 'https://www.linkedin.com/in/seu-perfil-aqui',
       color: 'hover:text-blue-600'
     },
     {
