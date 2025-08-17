@@ -43,17 +43,6 @@ const Hero = () => {
             desenvolvimento e Business Intelligence.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-            <Button size="lg" className="hero-gradient text-white hover-lift glow-effect">
-              <Mail className="w-5 h-5 mr-2" />
-              Vamos Conversar
-            </Button>
-            <Button variant="outline" size="lg" className="hover-lift">
-              <Phone className="w-5 h-5 mr-2" />
-              (61) 98107-6848
-            </Button>
-          </div>
 
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto animate-slide-in-right" style={{ animationDelay: '0.8s' }}>
