@@ -27,7 +27,7 @@ const Header = () => {
         <nav className="flex justify-between items-center">
           {/* Logo/Brand */}
           <div 
-            onClick={() => scrollToSection('hero')}
+            onClick={() => scrollToSection('sobre')}
             className="text-xl font-bold text-hero-text cursor-pointer hover:text-primary transition-colors"
           >
             Arthur Henrique
