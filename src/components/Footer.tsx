@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Heart, ArrowUp } from "lucide-react";
+import { ArrowUp } from "lucide-react";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -9,7 +9,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-hero-text text-white py-12 relative overflow-hidden">
+    <footer className="bg-hero-text text-white py-8 relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 bg-gradient-to-r from-hero-text via-hero-text/95 to-primary/20"></div>
       <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
@@ -47,8 +47,8 @@ const Footer = () => {
             <p className="text-white/70 text-sm mb-4">
               © {currentYear} Arthur Henrique Gomes de Oliveira. Todos os direitos reservados.
             </p>
-            <p className="text-white/50 text-xs flex items-center justify-center gap-1">
-              Desenvolvido com <Heart className="w-3 h-3 text-red-400 animate-pulse" /> usando React & Tailwind CSS
+            <p className="text-white/50 text-xs">
+              Desenvolvido usando React & Tailwind CSS
             </p>
           </div>
 
