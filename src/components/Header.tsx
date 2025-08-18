@@ -70,7 +70,7 @@ const Header = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-border pt-4 animate-fade-in-up">
             <div className="flex flex-col space-y-3">
-              {navItems.map((item) => (
+               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
@@ -79,17 +79,6 @@ const Header = () => {
                   {item.label}
                 </button>
               ))}
-              
-              <div className="flex flex-col space-y-2 pt-4 border-t border-border">
-                <Button variant="outline" size="sm" className="justify-start">
-                  <Download className="w-4 h-4 mr-2" />
-                  Download CV
-                </Button>
-                <Button size="sm" className="justify-start">
-                  <Phone className="w-4 h-4 mr-2" />
-                  (61) 98107-6848
-                </Button>
-              </div>
             </div>
           </div>
         )}
