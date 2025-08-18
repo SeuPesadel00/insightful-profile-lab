@@ -33,28 +33,31 @@ const Header = () => {
             Arthur Henrique
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="text-muted-foreground hover:text-primary transition-colors font-medium"
-              >
-                {item.label}
-              </button>
-            ))}
-            
-            <div className="flex items-center space-x-2 ml-6">
-              <Button variant="outline" size="sm" className="hover-lift">
-                <Download className="w-4 h-4 mr-2" />
-                CV PDF
-              </Button>
-              <Button size="sm" className="glow-effect">
-                <Mail className="w-4 h-4 mr-2" />
-                Contato
-              </Button>
+          {/* Desktop Navigation - Centered */}
+          <div className="hidden md:flex items-center justify-center flex-1">
+            <div className="flex items-center space-x-8">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="text-muted-foreground hover:text-primary transition-colors font-medium"
+                >
+                  {item.label}
+                </button>
+              ))}
             </div>
+          </div>
+          
+          {/* Desktop Action Buttons */}
+          <div className="hidden md:flex items-center space-x-2">
+            <Button variant="outline" size="sm" className="hover-lift">
+              <Download className="w-4 h-4 mr-2" />
+              CV PDF
+            </Button>
+            <Button size="sm" className="glow-effect">
+              <Mail className="w-4 h-4 mr-2" />
+              Contato
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
