@@ -9,17 +9,17 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-hero-text text-white py-8 relative overflow-hidden">
-      {/* Background pattern */}
+    <footer className="bg-background text-foreground py-8 relative">
+      {/* Background pattern
       <div className="absolute inset-0 bg-gradient-to-r from-hero-text via-hero-text/95 to-primary/20"></div>
       <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-1/4 w-48 h-48 bg-hero-accent/20 rounded-full blur-2xl"></div>
+      <div className="absolute bottom-0 right-1/4 w-48 h-48 bg-hero-accent/20 rounded-full blur-2xl"></div>  */}
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center">
           {/* Main content */}
           <div className="mb-8">
-            <h3 className="text-2xl font-bold mb-2">Arthur Henrique Gomes de Oliveira</h3>
+            <h3 className="text-2xl font-bold mb-2"> Arthur Henrique </h3>
             <p className="text-white/80 text-lg">Analista de Sistemas & Especialista em TI</p>
           </div>
 
@@ -45,7 +45,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="pt-8 border-t border-white/20">
             <p className="text-white/70 text-sm mb-4">
-              © {currentYear} Arthur Henrique Gomes de Oliveira. Todos os direitos reservados.
+              © {currentYear} Todos os direitos reservados.
             </p>
             <p className="text-white/50 text-xs">
               Desenvolvido usando React & Tailwind CSS

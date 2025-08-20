@@ -28,7 +28,7 @@ const Hero = () => {
           {/* Main heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-hero-text mb-6 animate-fade-in-up">
             Arthur Henrique
-            <span className="block text-gradient mt-2">Gomes de Oliveira</span>
+            <span className="block text-gradient mt-2"></span>
           </h1>
 
           {/* Subtitle */}
@@ -60,8 +60,8 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary/30 rounded-full flex justify-center">
+      <div className="absolute bottom-3 left-2/2 transform -translate-x-2/2 animate-bounce">
+        <div className="w-7 h-11 border-2 border-primary/30 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>

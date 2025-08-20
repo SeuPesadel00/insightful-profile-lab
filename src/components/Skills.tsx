@@ -21,7 +21,7 @@ const Skills = () => {
     {
       name: 'Gerenciamento de Projetos',
       category: 'Gestão & Análise',
-      level: 85,
+      level: 70,
       icon: <Users className="w-4 h-4" />,
       description: 'Liderança de projetos end-to-end'
     },

@@ -8,36 +8,46 @@
 
 @layer base {
   :root {
-    /* Neutral Professional Theme */
-    --background: 250 250 250;
-    --foreground: 39 39 42;
+    /* Tema Neutro (Preto e Branco) */
+
+    /* Fundo e texto principal */
+    --background: 0 0% 3.9%; /* Preto quase puro */
+    --foreground: 0 0% 98%; /* Branco quase puro */
+
+    /* Cartões e elementos de destaque */
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
     
-    --card: 255 255 255;
-    --card-foreground: 39 39 42;
+    /* Botões e elementos primários (Branco com texto preto) */
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9.0%; /* Preto um pouco mais suave */
+    --primary-glow: 0 0% 98%;
     
-    --primary: 71 85 105; /* Neutral Slate */
-    --primary-foreground: 248 250 252;
-    --primary-glow: 100 116 139;
+    /* Cores secundárias (Cinza claro para contraste) */
+    --secondary: 0 0% 14.9%; /* Cinza escuro */
+    --secondary-foreground: 0 0% 98%;
+
+    /* Cores de acento (para elementos que se destacam) */
+    --accent: 0 0% 98%;
+    --accent-foreground: 0 0% 9.0%;
+
+    /* Textos secundários (Cinza claro para ser sutil) */
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 60%; /* Cinza médio */
+
+    /* Títulos e textos grandes */
+    --hero-text: 0 0% 98%;
+    --hero-accent: 0 0% 60%;
+
+    /* Cores de status */
+    --success: 142.1 76.2% 36.3%;
+    --warning: 45.1 81.2% 60.8%;
+    --destructive: 0 84.2% 60.2%;
     
-    --secondary: 241 245 249;
-    --secondary-foreground: 51 65 85;
-    
-    --accent: 244 244 245; /* Neutral accent */
-    --accent-foreground: 39 39 42;
-    
-    --muted: 244 244 245;
-    --muted-foreground: 113 113 122;
-    
-    --hero-text: 15 23 42; /* Deep slate for hero text */
-    --hero-accent: 100 116 139; /* Muted slate accent */
-    
-    --success: 34 197 94;
-    --warning: 251 191 36;
-    --destructive: 239 68 68;
-    
-    --border: 228 228 231;
-    --input: 228 228 231;
-    --ring: 71 85 105;
+    /* Bordas e inputs */
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 60%;
     
     --radius: 12px;
     

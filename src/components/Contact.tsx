@@ -39,13 +39,13 @@ const Contact = () => {
     {
       icon: <Linkedin className="w-5 h-5" />,
       label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/seu-perfil-aqui',
+      href: 'https://www.linkedin.com/in/arthur-henrique-208679226/',
       color: 'hover:text-blue-600'
     },
     {
       icon: <Github className="w-5 h-5" />,
       label: 'GitHub',
-      href: '#',
+      href: 'https://github.com/SeuPesadel00/insightful-profile-lab',
       color: 'hover:text-gray-800'
     }
   ];
@@ -123,11 +123,14 @@ const Contact = () => {
               <div className="space-y-4">
                 <Button 
                   size="lg" 
-                  className="w-full hero-gradient text-white hover-lift glow-effect"
-                  onClick={handleDownloadCV}
-                >
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 hover-lift glow-effect"
+                  asChild
+                  onClick={handleDownloadCV} > 
+                  <a href="downloads/Curriculo-Arthur.pdf" download>
+
                   <Download className="w-5 h-5 mr-2" />
                   Download Currículo PDF
+                  </a>
                 </Button>
                 
                 <div className="flex space-x-4">
@@ -241,7 +244,7 @@ const Contact = () => {
                   <Button 
                     type="submit" 
                     size="lg" 
-                    className="w-full hero-gradient text-white hover-lift glow-effect"
+                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90 hover-lift glow-effect"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
