@@ -47,7 +47,7 @@ const Education = () => {
 
   const certifications = [
     'Microsoft Office Specialist',
-    'SAP Associate Certification',
+    'SAP (Associado)',
     'Power BI Fundamentals',
     'ITIL Foundation (em progresso)'
   ];

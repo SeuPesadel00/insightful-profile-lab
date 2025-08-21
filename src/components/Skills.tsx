@@ -28,14 +28,14 @@ const Skills = () => {
     {
       name: 'Análise de Sistemas',
       category: 'Gestão & Análise',
-      level: 90,
+      level: 95,
       icon: <Code className="w-4 h-4" />,
       description: 'Levantamento de requisitos e soluções'
     },
     {
-      name: 'Business Intelligence',
+      name: 'Inteligência de negócios',
       category: 'Gestão & Análise',
-      level: 75,
+      level: 60,
       icon: <Database className="w-4 h-4" />,
       description: 'Análise de dados e insights'
     },
@@ -49,28 +49,49 @@ const Skills = () => {
     {
       name: 'SAP (Associate)',
       category: 'Gestão & Análise',
-      level: 75,
+      level: 50,
       icon: <Server className="w-4 h-4" />,
       description: 'Administração e suporte SAP'
     },
     {
       name: 'SQL',
       category: 'Desenvolvimento',
-      level: 90,
+      level: 70,
       icon: <Database className="w-4 h-4" />,
       description: 'Consultas complexas e otimização'
     },
     {
       name: 'Python',
       category: 'Desenvolvimento',
-      level: 80,
+      level: 50,
       icon: <Code className="w-4 h-4" />,
       description: 'Automação e análise de dados'
     },
     {
-      name: 'HTML/CSS',
+      name: 'HTML',
+      category: 'Desenvolvimento',
+      level: 90,
+      icon: <Code className="w-4 h-4" />,
+      description: 'Interface e experiência do usuário'
+    },
+    {
+      name: 'CSS',
       category: 'Desenvolvimento',
       level: 85,
+      icon: <Code className="w-4 h-4" />,
+      description: 'Interface e experiência do usuário'
+    },
+    {
+      name: 'JavaScript',
+      category: 'Desenvolvimento',
+      level: 60,
+      icon: <Code className="w-4 h-4" />,
+      description: 'Interface e experiência do usuário'
+    },
+    {
+      name: 'C/C#',
+      category: 'Desenvolvimento',
+      level: 40,
       icon: <Code className="w-4 h-4" />,
       description: 'Interface e experiência do usuário'
     },
@@ -84,21 +105,21 @@ const Skills = () => {
     {
       name: 'Administração de Servidores',
       category: 'Infraestrutura & Suporte',
-      level: 90,
+      level: 80,
       icon: <Server className="w-4 h-4" />,
       description: 'Windows Server e Linux'
     },
     {
       name: 'Suporte Técnico',
       category: 'Infraestrutura & Suporte',
-      level: 95,
+      level: 100,
       icon: <Users className="w-4 h-4" />,
       description: 'Atendimento especializado'
     },
     {
       name: 'Suporte Remoto',
       category: 'Infraestrutura & Suporte',
-      level: 95,
+      level: 100,
       icon: <Server className="w-4 h-4" />,
       description: 'Ferramentas VNC, AnyDesk, LogMeIn'
     }
@@ -154,6 +175,7 @@ const Skills = () => {
               size="sm"
               onClick={() => setSelectedCategory(category.id)}
               className="hover-lift"
+              translate="no" // <-- Adicionado aqui para evitar tradução dos botões de filtro
             >
               {category.label}
             </Button>
@@ -174,8 +196,10 @@ const Skills = () => {
                     {skill.icon}
                   </div>
                   <div>
-                    <CardTitle className="text-base">{skill.name}</CardTitle>
-                    <Badge variant="secondary" className="text-xs mt-1">
+                    {/* AQUI ESTÁ A PRIMEIRA CORREÇÃO: Adicione translate="no" na CardTitle */}
+                    <CardTitle className="text-base" translate="no">{skill.name}</CardTitle>
+                    {/* E A SEGUNDA: Adicione em cada Badge */}
+                    <Badge variant="secondary" className="text-xs mt-1" translate="no">
                       {skill.category}
                     </Badge>
                   </div>
@@ -190,7 +214,7 @@ const Skills = () => {
                 <div className="space-y-2">
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Proficiência</span>
-                    <span className="font-semibold text-primary">{skill.level}%</span>
+                    <span className="font-semibold text-primary" translate="no">{skill.level}%</span>
                   </div>
                   <Progress 
                     value={animatedSkills ? skill.level : 0} 
@@ -205,9 +229,9 @@ const Skills = () => {
         {/* Skills summary */}
         <div className="mt-16 text-center animate-fade-in-up">
           <p className="text-muted-foreground text-lg">
-            <strong className="text-primary">{allSkills.length}</strong> competências especializadas •{' '}
-            <strong className="text-primary">{categories.length - 1}</strong> áreas de expertise •{' '}
-            <strong className="text-primary">7+</strong> anos de experiência
+            <strong className="text-primary" translate="no">{allSkills.length}</strong> competências especializadas •{' '}
+            <strong className="text-primary" translate="no">{categories.length - 1}</strong> áreas de expertise •{' '}
+            <strong className="text-primary" translate="no">7+</strong> anos de experiência
           </p>
         </div>
       </div>

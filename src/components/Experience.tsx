@@ -21,7 +21,7 @@ const Experience = () => {
     {
       company: 'Grupo Tesoura de Ouro',
       role: 'Analista de Sistemas Pleno',
-      period: 'Set 2021 - Presente',
+      period: ' Set 2021 - Presente',
       location: 'Brasília, DF',
       type: 'Tempo Integral',
       details: [
@@ -47,7 +47,7 @@ const Experience = () => {
         'Criação e gerenciamento de contas de usuário',
         'Instalação e configuração de softwares'
       ],
-      skills: ['Service Desk', 'Suporte Técnico', 'Windows', 'Linux', 'Mac OS']
+      skills: ['Suporte Remoto', 'Manutenção Hardware', 'Sistemas (Windows, Linux, Mac OS)',]
     },
     {
       company: 'Via Varejo',
@@ -56,13 +56,13 @@ const Experience = () => {
       location: 'Brasília, DF',
       type: 'Tempo Integral',
       details: [
-        'Suporte ao sistema de "Ordem de Serviços" dos montadores e outras aplicações internas',
+        'Suporte ao sistema interno para lançamento das "Ordens de Serviços"',
         'Resolução de problemas de hardware e software (Windows, Linux, Mac, Pacote Office)',
-        'Reparo e manutenção de usuários e elementos de sistemas',
+        'Reparo e manutenção de usuários e elementos do sistemas',
         'Suporte técnico de TI nos escritórios Casas Bahia e Ponto Frio',
         'Atendimento via Service Now, telefonia e WhatsApp'
       ],
-      skills: ['Service Now', 'Suporte Técnico', 'Sistemas Internos', 'Atendimento ao Cliente']
+      skills: ['Service Desk', 'Help Desk', 'Sistemas Internos', 'Distribuição de Demandas']
     },
     {
       company: 'Universidade Presbiteriana Mackenzie',
@@ -71,10 +71,10 @@ const Experience = () => {
       location: 'Brasília, DF',
       type: 'Tempo Integral',
       details: [
-        'Infraestrutura e Manutenção de redes, garantindo a conectividade e o serviço de telefonia e rede interna de todo o campus',
+        'Infraestrutura e Manutenção de redes, garantindo a conectividade nas relações interna do campus',
         'Atendimento em laboratórios, salas de aula e suporte em eventos',
         'Atendimento particular nas residências de membros da diretoria',
-        'Suporte técnico e remoto aos alunos, professores e demais funcionários',
+        'Suporte técnico e remoto de professores e demais colaboradores',
         'Gerenciamento de usuários no ambiente AD'
       ],
       skills: ['Active Directory', 'Infraestrutura de Redes', 'Suporte Técnico', 'Telefonia']
@@ -135,25 +135,25 @@ const Experience = () => {
                       <div className="flex items-start justify-between">
                         <div className="flex-1">
                           <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                            {exp.role}
+                            <span translate="no">{exp.role}</span>
                           </CardTitle>
                           <CardDescription className="text-lg font-semibold text-primary mt-1">
-                            {exp.company}
+                            <span translate="no">{exp.company}</span>
                           </CardDescription>
                           
                           <div className="flex flex-wrap items-center gap-3 mt-3 text-sm text-muted-foreground">
                             <div className="flex items-center gap-1">
                               <Calendar className="w-4 h-4" />
-                              {exp.period}
+                              <span translate="no">{exp.period}</span>
                             </div>
                             {exp.location && (
                               <div className="flex items-center gap-1">
                                 <MapPin className="w-4 h-4" />
-                                {exp.location}
+                                <span translate="no">{exp.location}</span>
                               </div>
                             )}
                             {exp.type && (
-                              <Badge variant="outline" className="text-xs">
+                              <Badge variant="outline" className="text-xs" translate="no">
                                 {exp.type}
                               </Badge>
                             )}
@@ -174,26 +174,26 @@ const Experience = () => {
                       <CardContent className="animate-fade-in-up">
                         <div className="space-y-4">
                           <div>
-                            <h4 className="font-semibold text-sm text-muted-foreground mb-2 uppercase tracking-wide">
+                            <h4 className="font-semibold text-sm text-muted-foreground mb-2 uppercase tracking-wide" translate="no">
                               Principais Responsabilidades
                             </h4>
                             <ul className="space-y-2">
                               {exp.details.map((detail, idx) => (
                                 <li key={idx} className="flex items-start gap-2">
                                   <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                                  <span className="text-muted-foreground">{detail}</span>
+                                  <span className="text-muted-foreground" translate="no">{detail}</span>
                                 </li>
                               ))}
                             </ul>
                           </div>
                           
                           <div>
-                            <h4 className="font-semibold text-sm text-muted-foreground mb-2 uppercase tracking-wide">
+                            <h4 className="font-semibold text-sm text-muted-foreground mb-2 uppercase tracking-wide" translate="no">
                               Tecnologias & Competências
                             </h4>
                             <div className="flex flex-wrap gap-2">
                               {exp.skills.map((skill, idx) => (
-                                <Badge key={idx} variant="secondary" className="text-xs">
+                                <Badge key={idx} variant="secondary" className="text-xs" translate="no">
                                   {skill}
                                 </Badge>
                               ))}
@@ -212,9 +212,9 @@ const Experience = () => {
         <div className="text-center mt-16 animate-fade-in-up">
           <p className="text-muted-foreground">
             <Briefcase className="w-5 h-5 inline mr-2" />
-            Experiência sólida em <strong className="text-primary">análise de sistemas</strong>, 
+            <span translate="no">Experiência sólida em <strong className="text-primary">análise de sistemas</strong>, 
             <strong className="text-primary"> infraestrutura</strong> e 
-            <strong className="text-primary"> gerenciamento de projetos</strong>
+            <strong className="text-primary"> gerenciamento de projetos</strong></span>
           </p>
         </div>
       </div>
