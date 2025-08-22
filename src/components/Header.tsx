@@ -50,9 +50,11 @@ const Header = () => {
           
           {/* Desktop Action Buttons */}
           <div className="hidden md:flex items-center space-x-2">
-            <Button variant="outline" size="sm" className="hover-lift">
-              <Download className="w-4 h-4 mr-2" />
-              CV PDF
+            <Button variant="outline" size="sm" className="hover-lift" asChild>
+              <a href="/downloads/Curriculo-Arthur.pdf" download="Curriculo-Arthur.pdf">
+                <Download className="w-4 h-4 mr-2" />
+                CV PDF
+              </a>
             </Button>
             <Button size="sm" className="glow-effect">
               <Mail className="w-4 h-4 mr-2" />
