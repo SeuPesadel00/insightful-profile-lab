@@ -33,10 +33,10 @@ const Footer = () => {
             </a>
             <div className="hidden md:block w-1 h-1 bg-white/40 rounded-full"></div>
             <a 
-              href="tel:+5561981076848" 
+              href="tel:+5561982201177" 
               className="hover:text-primary-glow transition-colors"
             >
-              (61) 98107-6848
+              (61) 98220-1177
             </a>
             <div className="hidden md:block w-1 h-1 bg-white/40 rounded-full"></div>
             <span>Brasília, DF - Brasil</span>

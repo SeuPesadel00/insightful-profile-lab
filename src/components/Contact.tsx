@@ -22,8 +22,8 @@ const Contact = () => {
     {
       icon: <Phone className="w-5 h-5" />,
       label: 'Telefone',
-      value: '(61) 98107-6848',
-      href: 'tel:+5561981076848',
+      value: '(61) 98220-1177',
+      href: 'tel:+5561982201177',
       description: 'WhatsApp disponível'
     },
     {
