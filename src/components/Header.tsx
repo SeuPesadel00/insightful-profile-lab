@@ -22,7 +22,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-lg border-b border-border shadow-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-dark-section/90 backdrop-blur-lg border-b border-border shadow-sm">
       <div className="container mx-auto px-6 py-4">
         <nav className="flex justify-between items-center">
           {/* Logo/Brand */}

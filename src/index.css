@@ -8,58 +8,62 @@
 
 @layer base {
   :root {
-    /* Tema Neutro (Preto e Branco) */
-
-    /* Fundo e texto principal */
-    --background: 0 0% 3.9%; /* Preto quase puro */
-    --foreground: 0 0% 98%; /* Branco quase puro */
-
-    /* Cartões e elementos de destaque */
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
+    /* Sistema de dois tons de preto */
     
-    /* Botões e elementos primários (Branco com texto preto) */
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9.0%; /* Preto um pouco mais suave */
-    --primary-glow: 0 0% 98%;
+    /* Preto mais escuro para seções principais */
+    --background-dark: 0 0% 4%; /* Preto mais escuro */
+    --background-light: 0 0% 8%; /* Preto mais claro */
     
-    /* Cores secundárias (Cinza claro para contraste) */
-    --secondary: 0 0% 14.9%; /* Cinza escuro */
-    --secondary-foreground: 0 0% 98%;
+    /* Fundo principal (preto escuro) */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 95%; /* Texto claro */
 
-    /* Cores de acento (para elementos que se destacam) */
-    --accent: 0 0% 98%;
-    --accent-foreground: 0 0% 9.0%;
+    /* Cartões usam o preto mais claro */
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
+    
+    /* Elementos primários em cinza claro para contraste */
+    --primary: 0 0% 90%;
+    --primary-foreground: 0 0% 8%;
+    --primary-glow: 0 0% 90%;
+    
+    /* Secundário usa o preto mais claro */
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 0 0% 95%;
 
-    /* Textos secundários (Cinza claro para ser sutil) */
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 60%; /* Cinza médio */
+    /* Acento usa cinza médio */
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 95%;
 
-    /* Títulos e textos grandes */
-    --hero-text: 0 0% 98%;
-    --hero-accent: 0 0% 60%;
+    /* Texto muted em cinza médio */
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 65%;
 
-    /* Cores de status */
+    /* Cores para títulos */
+    --hero-text: 0 0% 95%;
+    --hero-accent: 0 0% 65%;
+
+    /* Cores de status mantidas */
     --success: 142.1 76.2% 36.3%;
     --warning: 45.1 81.2% 60.8%;
     --destructive: 0 84.2% 60.2%;
     
-    /* Bordas e inputs */
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 60%;
+    /* Bordas em cinza escuro */
+    --border: 0 0% 12%;
+    --input: 0 0% 12%;
+    --ring: 0 0% 65%;
     
     --radius: 12px;
     
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
+    /* Gradients minimalistas */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background-dark)) 0%, hsl(var(--background-light)) 100%);
     --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--accent)) 100%);
     --gradient-accent: linear-gradient(90deg, hsl(var(--primary)) 0%, hsl(var(--hero-accent)) 100%);
     
-    /* Shadows */
-    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-elevated: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --shadow-glow: 0 0 20px rgba(71, 85, 105, 0.15);
+    /* Sombras suaves */
+    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    --shadow-elevated: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+    --shadow-glow: 0 0 20px rgba(255, 255, 255, 0.05);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -209,5 +213,14 @@
   
   .bg-hero {
     background: var(--gradient-hero);
+  }
+
+  /* Classes para alternar fundos */
+  .bg-dark-section {
+    background-color: hsl(var(--background-dark));
+  }
+  
+  .bg-light-section {
+    background-color: hsl(var(--background-light));
   }
 }
