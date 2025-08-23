@@ -56,7 +56,11 @@ const Header = () => {
                 CV PDF
               </a>
             </Button>
-            <Button size="sm" className="glow-effect">
+            <Button 
+              size="sm" 
+              className="glow-effect"
+              onClick={() => scrollToSection('contato')}
+            >
               <Mail className="w-4 h-4 mr-2" />
               Contato
             </Button>
