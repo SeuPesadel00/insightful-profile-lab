@@ -23,13 +23,20 @@ interface Certificate {
 const certificates: Certificate[] = [
   {
     id: "1",
-    title: "Certificado em Desenvolvimento Web",
-    institution: "Universidade Exemplo",
-    date: "2023",
-    image: "/certificates/exemplo-certificado.jpg", // Substitua pelo nome real do arquivo
+    title: "Lógica de Programação",
+    institution: "SENAI - Departamento Regional do Distrito Federal",
+    date: "06/09/2024",
+    image: "/certificates/certificado-senai-logica-programacao.png",
     type: "certificate"
   },
-  // Adicione mais certificados conforme necessário
+  {
+    id: "2",
+    title: "Windows 11: Formação Básica",
+    institution: "LinkedIn Learning",
+    date: "17/06/2023",
+    image: "/certificates/certificado-linkedin-windows11.png",
+    type: "certificate"
+  }
 ];
 
 const Certificates = () => {
