@@ -6,6 +6,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 import { Badge } from "@/components/ui/badge";
 import { Award, Calendar } from "lucide-react";
@@ -41,6 +42,20 @@ const certificates: Certificate[] = [
 
 const Certificates = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [api, setApi] = useState<CarouselApi | null>(null);
+
+  useEffect(() => {
+    if (!api) return;
+    // Atualiza o indicador com a seleção do carousel
+    setCurrentIndex(api.selectedScrollSnap());
+    const onSelect = () => setCurrentIndex(api.selectedScrollSnap());
+    api.on("select", onSelect);
+    api.on("reInit", onSelect);
+    return () => {
+      api.off("select", onSelect);
+      api.off("reInit", onSelect);
+    };
+  }, [api]);
 
   if (certificates.length === 0) {
     return (
@@ -83,6 +98,7 @@ const Certificates = () => {
               align: "start",
               loop: true,
             }}
+            setApi={setApi}
           >
             <CarouselContent>
               {certificates.map((certificate, index) => (
@@ -146,7 +162,7 @@ const Certificates = () => {
                     ? "bg-primary w-8" 
                     : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
                 }`}
-                onClick={() => setCurrentIndex(index)}
+                onClick={() => api?.scrollTo(index)}
                 aria-label={`Ir para certificado ${index + 1}`}
               />
             ))}
